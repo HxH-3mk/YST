@@ -2,7 +2,7 @@
   "name": "ادوات الطالب",
   "short_name": "ادوات",
   "description": "ادوات طلاب ينبع",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
