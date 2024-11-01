@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outlook تطبيق ال</title>
+<link rel="icon" href="5109515.png" type="image/png">
+<style>
+    body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        background-color: #333333;
+        border-radius: 16px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        padding: 40px;
+        max-width: 90%;
+        text-align: center;
+        position: relative;
+        transition: box-shadow 0.2s ease;
+    }
+    h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+        color: #ffffff;
+    }
+    .button {
+        color: #ffffff;
+        padding: 18px;
+        font-size: 20px;
+        margin: 15px 0;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease, box-shadow 0.2s ease;
+    }
+    .button.android { background-color: #34a853; }
+    .button.ios { background-color: #007aff; }
+
+    /* Hover effects */
+    .button.android:hover { background-color: #2b8e42; }
+    .button.ios:hover { background-color: #0063e0; }
+
+    /* Neon effect on mouse hover */
+    .container:hover {
+        box-shadow: 0 0 20px rgba(58, 150, 255, 0.6), 0 0 30px rgba(58, 150, 255, 0.4), 0 0 40px rgba(58, 150, 255, 0.3);
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 600px) {
+        .container {
+            padding: 20px;
+            max-width: 100%;
+        }
+        h1 {
+            font-size: 20px;
+        }
+        .button {
+            font-size: 16px;
+            padding: 12px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>
+        <img src="5109515.png" alt="Icon" style="width: 24px; height: 24px; vertical-align: middle;">
+        Outlook تطبيق ال
+    </h1>
+    <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.outlook&pcampaignid=web_share" class="button android" target="_blank">تطبيق الأندرويد</a>
+    <a href="https://apps.apple.com/app/id951937596" class="button ios" target="_blank">تطبيق الايفون</a>
+</div>
+
+</body>
+</html>
