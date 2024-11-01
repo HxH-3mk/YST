@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أدوات تنزيل التطبيقات</title>
+<link rel="icon" href="5109515.png" type="image/png">
+<style>
+    body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        background-color: #333333;
+        border-radius: 16px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        padding: 40px;
+        max-width: 90%;
+        text-align: center;
+        position: relative;
+        transition: box-shadow 0.2s ease;
+    }
+    h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+        color: #ffffff;
+    }
+    .button {
+        color: #ffffff;
+        padding: 18px;
+        font-size: 20px;
+        margin: 15px 0;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease, box-shadow 0.2s ease;
+    }
+    .button.app-download { background-color: #007bff; }
+    .button.blackboard { background-color: #28a745; }
+    .button.outlook { background-color: #ff9800; }
+    .button.chat-gpt { background-color: #6f42c1; }
+    .button.calculator { background-color: #e91e63; }
+    .button.notes { background-color: #009688; }
+    .button.home { background-color: #795548; }
+
+    /* Hover effects */
+    .button.app-download:hover { background-color: #0056b3; }
+    .button.blackboard:hover { background-color: #1e7e34; }
+    .button.outlook:hover { background-color: #e68a00; }
+    .button.chat-gpt:hover { background-color: #5a35a3; }
+    .button.calculator:hover { background-color: #c2185b; }
+    .button.notes:hover { background-color: #00796b; }
+    .button.home:hover { background-color: #5d4037; }
+
+    /* Neon effect on mouse hover */
+    .container:hover {
+        box-shadow: 0 0 20px rgba(58, 150, 255, 0.6), 0 0 30px rgba(58, 150, 255, 0.4), 0 0 40px rgba(58, 150, 255, 0.3);
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 600px) {
+        .container {
+            padding: 20px;
+            max-width: 100%;
+        }
+        h1 {
+            font-size: 20px;
+        }
+        .button {
+            font-size: 16px;
+            padding: 12px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>
+        <img src="5109515.png" alt="Icon" style="width: 24px; height: 24px; vertical-align: middle;">
+        تنزيل التطبيقات
+    </h1>
+    <a href="CAI.html" class="button app-download" target="_blank">تنزيل تطبيق الكلية</a>
+    <a href="BbAI.html" class="button blackboard" target="_blank">تنزيل تطبيق البلاك بورد</a>
+    <a href="OlAI.html" class="button outlook" target="_blank">تنزيل تطبيق الأوت لوك</a>
+    <a href="CgAI.html" class="button chat-gpt" target="_blank">تنزيل Chat GPT</a>
+    <a href="CcA.html" class="button calculator" target="_blank">تنزيل تطبيق الحاسبة المطورة</a>
+    <a href="FcA.html" class="button notes" target="_blank">أفضل تطبيق ملاحظات</a>
+    <a href="index.html" class="button home" target="_blank">العودة للشاشة الرئيسية</a>
+</div>
+
+</body>
+</html>
