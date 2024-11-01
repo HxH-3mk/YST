@@ -3,6 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تطبيق ملاحظات</title>
+
+<!-- رابط ملف manifest.json لدعم PWA -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- تضمين خدمة Service Worker لدعم PWA -->
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(function(registration) {
+        console.log('تم تسجيل Service Worker بنجاح:', registration.scope);
+      })
+      .catch(function(error) {
+        console.log('فشل تسجيل Service Worker:', error);
+      });
+  }
+</script>
+
 <style>
     body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -25,10 +43,10 @@
         transition: box-shadow 0.2s ease;
     }
     h1 {
-        font-size: 15px; /* تصغير حجم الخط */
+        font-size: 15px;
         margin-bottom: 25px;
         color: #ffffff;
-        line-height: 1.4; /* لضبط المسافة بين السطور */
+        line-height: 1.4;
     }
     .button {
         color: #ffffff;
@@ -45,16 +63,16 @@
     .button.android { background-color: #34a853; }
     .button.ios { background-color: #007aff; }
 
-    /* Hover effects */
+    /* تأثيرات التمرير */
     .button.android:hover { background-color: #2b8e42; }
     .button.ios:hover { background-color: #0063e0; }
 
-    /* Neon effect on mouse hover */
+    /* تأثير النيون عند مرور الفأرة */
     .container:hover {
         box-shadow: 0 0 20px rgba(58, 150, 255, 0.6), 0 0 30px rgba(58, 150, 255, 0.4), 0 0 40px rgba(58, 150, 255, 0.3);
     }
 
-    /* Responsive design for smaller screens */
+    /* تصميم خاص للشاشات الصغيرة */
     @media (max-width: 600px) {
         .container {
             padding: 20px;
