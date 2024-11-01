@@ -32,7 +32,6 @@
         color: #ffffff;
     }
     .button {
-        background-color: #007bff;
         color: #ffffff;
         padding: 18px;
         font-size: 20px;
@@ -44,27 +43,24 @@
         display: block;
         transition: background-color 0.3s ease, box-shadow 0.2s ease;
     }
-    .button:hover {
-        background-color: #0056b3;
-    }
-    .button.secondary {
-        background-color: #28a745;
-    }
-    .button.secondary:hover {
-        background-color: #1e7e34;
-    }
-    .button.cutter {
-        background-color: #ff9800;
-    }
-    .button.cutter:hover {
-        background-color: #e68a00;
-    }
-    .button.price-calculator {
-        background-color: #6f42c1;
-    }
-    .button.price-calculator:hover {
-        background-color: #5a35a3;
-    }
+
+    /* الألوان الأساسية للأزرار */
+    .button.app-download { background-color: #007bff; }
+    .button.blackboard { background-color: #28a745; }
+    .button.outlook { background-color: #ff9800; }
+    .button.chat-gpt { background-color: #6f42c1; }
+    .button.calculator { background-color: #e91e63; }
+    .button.notes { background-color: #009688; }
+    .button.home { background-color: #795548; }
+
+    /* تأثير التمرير لكل زر */
+    .button.app-download:hover { background-color: #0056b3; }
+    .button.blackboard:hover { background-color: #1e7e34; }
+    .button.outlook:hover { background-color: #e68a00; }
+    .button.chat-gpt:hover { background-color: #5a35a3; }
+    .button.calculator:hover { background-color: #c2185b; }
+    .button.notes:hover { background-color: #00796b; }
+    .button.home:hover { background-color: #5d4037; }
 
     /* Neon effect on mouse hover */
     .container:hover {
@@ -94,11 +90,11 @@
         <img src="5109515.png" alt="Icon" style="width: 24px; height: 24px; vertical-align: middle;">
         اختر الأداة
     </h1>
-    <a href="https://edugate.rcjy.edu.sa/jyup/init" class="button" target="_blank">موقع الجامعة</a>
-    <a href="https://jic.blackboard.com/" class="button secondary" target="_blank">موقع البلاك بورد</a>
-    <a href="TaPi.html" class="button price-calculator">تطبيقات وأدوات مهمة في الجامعة</a>
-    <a href="Syc.html" class="button price-calculator">التقويم الدراسي المطور</a>
-    <a href="HofA.html" class="button cutter">حساب ساعات الغياب</a>
+    <a href="https://edugate.rcjy.edu.sa/jyup/init" class="button app-download" target="_blank">موقع الجامعة</a>
+    <a href="https://jic.blackboard.com/" class="button blackboard" target="_blank">موقع البلاك بورد</a>
+    <a href="TaPi.html" class="button chat-gpt">تطبيقات وأدوات مهمة في الجامعة</a>
+    <a href="Syc.html" class="button calculator">التقويم الدراسي المطور</a>
+    <a href="HofA.html" class="button notes">حساب ساعات الغياب</a>
 </div>
 
 </body>
