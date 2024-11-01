@@ -3,24 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>أدوات طلاب ينبع</title>
-
-<!-- رابط ملف manifest.json لدعم PWA -->
-<link rel="manifest" href="/manifest.json">
-
-<!-- تضمين خدمة Service Worker لدعم PWA -->
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(function(registration) {
-        console.log('تم تسجيل Service Worker بنجاح:', registration.scope);
-      })
-      .catch(function(error) {
-        console.log('فشل تسجيل Service Worker:', error);
-      });
-  }
-</script>
-
 <style>
     body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -116,3 +98,4 @@
 
 </body>
 </html>
+
