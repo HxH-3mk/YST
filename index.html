@@ -153,7 +153,7 @@
   <body>
     <div class="container">
       <h1>
- أدوات خاصة لطلاب ينبع والجبيل 👨🏼‍🎓
+        أدوات خاصة لطلاب ينبع والجبيل 👨🏼‍🎓
       </h1>
       <a href="https://edugate.rcjy.edu.sa/jyup/init" class="button a" target="_blank">موقع الكلية</a>
       <a href="https://jic.blackboard.com/" class="button b" target="_blank">موقع البلاك بورد</a>
@@ -164,7 +164,7 @@
       <a href="App.html" class="button g">اضافة الموقع للشاشة الرئيسية كتطبيق ⬇️</a>
       <a href="https://t.me/ksa402" class="button f" target="_blank">تواصل مع المطور للاقتراحات 🌚</a>
       <!-- تحديث الزر مع جافاسكريبت لمنع التوجيه الفوري -->
-      <a href="https://buymeacoffee.com/hxh3mk" class="button h" onclick="showThankYouMessage(event)">Buy Me a Coffee ☕🤧</a>
+      <a href="https://buymeacoffee.com/hxh3mk" class="button h" onclick="showThankYouMessage(event)">Buy Me a Coffee ☕🥹</a>
       <p style="font-size: 12px; color: #cccccc; margin-top: 20px;">
         الموقع لا يمثل اي جهة رسمية وانما مجرد اجتهاد من طالب وقد يحتمل الخطأ
       </p>
@@ -200,9 +200,10 @@
         
         button.appendChild(thankYouMessage);
 
-        // تأخير التوجيه إلى الرابط لمدة 1 ثانية
+        // إزالة رسالة الشكر بعد انتهاء الأنيميشن
         setTimeout(() => {
-          window.location.href = button.href;
+          thankYouMessage.remove();
+          window.location.href = button.href; // توجيه المستخدم للرابط بعد الأنيميشن
         }, 1000);
       }
     </script>
