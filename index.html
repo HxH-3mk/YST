@@ -28,6 +28,13 @@
         transition: box-shadow 0.2s ease;
       }
 
+      /* تأثير النيون عند تمرير الماوس على الحاوية */
+      .container:hover {
+        box-shadow: 0 0 20px rgba(58, 150, 255, 0.6), 
+                    0 0 30px rgba(58, 150, 255, 0.4), 
+                    0 0 40px rgba(58, 150, 255, 0.3);
+      }
+
       h1 {
         font-size: 28px;
         margin-bottom: 25px;
@@ -146,7 +153,7 @@
   <body>
     <div class="container">
       <h1>
-        <img src="5109515.png" alt="Icon" style="width: 30px; height: 30px; vertical-align: middle;"> أدوات خاصة لطلاب ينبع والجبيل 👨🏼‍🎓
+      vertical-align: middle;"> أدوات خاصة لطلاب ينبع والجبيل 👨🏼‍🎓
       </h1>
       <a href="https://edugate.rcjy.edu.sa/jyup/init" class="button a" target="_blank">موقع الكلية</a>
       <a href="https://jic.blackboard.com/" class="button b" target="_blank">موقع البلاك بورد</a>
@@ -168,8 +175,15 @@
         event.preventDefault(); // منع التوجيه الفوري
         const button = event.target;
         
+        // إزالة أي رسالة شكر سابقة
+        const previousMessage = button.querySelector('.thank-you-message');
+        if (previousMessage) {
+          previousMessage.remove();
+        }
+
         // إضافة طبقة الشكر للزر
         const thankYouMessage = document.createElement('div');
+        thankYouMessage.className = 'thank-you-message';
         thankYouMessage.textContent = 'شكراً مره 🥹';
         thankYouMessage.style.position = 'absolute';
         thankYouMessage.style.top = '0';
