@@ -1,3 +1,3 @@
 Visit the home page from here
 
-hxh-3mk.github.io/YST
+https://hxh-3mk.github.io/YST
