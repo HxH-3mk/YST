@@ -88,15 +88,36 @@
         background-color: #FFD700;
         color: #000000;
         font-weight: bold;
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
         position: relative;
         overflow: hidden;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+        transition: box-shadow 0.3s ease;
       }
 
-      /* تأثير التوهج عند التمرير على زر "Buy Me a Coffee" */
-      .button.h:hover {
-        background-color: #ffbf00;
-        box-shadow: 0 0 15px rgba(255, 215, 0, 0.9), 0 0 25px rgba(255, 215, 0, 0.7);
+      /* تأثير التوهج عند تمرير الماوس */
+      .button.a:hover, .button.a:focus, .button.a:active {
+        box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+      }
+      .button.b:hover, .button.b:focus, .button.b:active {
+        box-shadow: 0 0 15px rgba(40, 167, 69, 0.8);
+      }
+      .button.c:hover, .button.c:focus, .button.c:active {
+        box-shadow: 0 0 15px rgba(255, 152, 0, 0.8);
+      }
+      .button.d:hover, .button.d:focus, .button.d:active {
+        box-shadow: 0 0 15px rgba(111, 66, 193, 0.8);
+      }
+      .button.e:hover, .button.e:focus, .button.e:active {
+        box-shadow: 0 0 15px rgba(233, 30, 99, 0.8);
+      }
+      .button.f:hover, .button.f:focus, .button.f:active {
+        box-shadow: 0 0 15px rgba(0, 150, 136, 0.8);
+      }
+      .button.g:hover, .button.g:focus, .button.g:active {
+        box-shadow: 0 0 15px rgba(121, 85, 72, 0.8);
+      }
+      .button.h:hover, .button.h:focus, .button.h:active {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
       }
 
       /* تأثير الضغط مع انيميشن الشكر على زر "Buy Me a Coffee" */
