@@ -76,46 +76,53 @@
         background-color: #795548;
       }
 
+      /* تخصيص زر "Buy Me a Coffee" */
       .button.h {
         background-color: #FFD700;
+        color: #000000;
+        font-weight: bold;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+        position: relative;
+        overflow: hidden;
       }
 
-      /* تأثير التمرير لكل زر */
-      .button.a:hover {
-        background-color: #0056b3;
-      }
-
-      .button.b:hover {
-        background-color: #1e7e34;
-      }
-
-      .button.c:hover {
-        background-color: #e68a00;
-      }
-
-      .button.d:hover {
-        background-color: #5a35a3;
-      }
-
-      .button.e:hover {
-        background-color: #c2185b;
-      }
-
-      .button.f:hover {
-        background-color: #00796b;
-      }
-
-      .button.g:hover {
-        background-color: #5d4037;
-      }
-
+      /* تأثير التوهج عند التمرير على زر "Buy Me a Coffee" */
       .button.h:hover {
-        background-color: #5d4037;
+        background-color: #ffbf00;
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.9), 0 0 25px rgba(255, 215, 0, 0.7);
       }
 
-      /* Neon effect on mouse hover */
-      .container:hover {
-        box-shadow: 0 0 20px rgba(58, 150, 255, 0.6), 0 0 30px rgba(58, 150, 255, 0.4), 0 0 40px rgba(58, 150, 255, 0.3);
+      /* تأثير الضغط مع انيميشن الشكر على زر "Buy Me a Coffee" */
+      .button.h:active::before {
+        content: 'شكراً مره 🥹';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #FFD700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        animation: thankYouAnimation 1s ease forwards;
+      }
+
+      /* حركة انيميشن الشكر */
+      @keyframes thankYouAnimation {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(1);
+        }
       }
 
       /* Responsive design for smaller screens */
@@ -149,10 +156,41 @@
       <a> ///////////////////////// </a>
       <a href="App.html" class="button g">اضافة الموقع للشاشة الرئيسية كتطبيق ⬇️</a>
       <a href="https://t.me/ksa402" class="button f" target="_blank">تواصل مع المطور للاقتراحات 🌚</a>
-      <a href="https://buymeacoffee.com/hxh3mk" class="button h" target="_blank">Buy Me a Coffee ☕🥹</a>
+      <!-- تحديث الزر مع جافاسكريبت لمنع التوجيه الفوري -->
+      <a href="https://buymeacoffee.com/hxh3mk" class="button h" onclick="showThankYouMessage(event)">Buy Me a Coffee ☕🤧</a>
       <p style="font-size: 12px; color: #cccccc; margin-top: 20px;">
         الموقع لا يمثل اي جهة رسمية وانما مجرد اجتهاد من طالب وقد يحتمل الخطأ
       </p>
     </div>
+
+    <script>
+      function showThankYouMessage(event) {
+        event.preventDefault(); // منع التوجيه الفوري
+        const button = event.target;
+        
+        // إضافة طبقة الشكر للزر
+        const thankYouMessage = document.createElement('div');
+        thankYouMessage.textContent = 'شكراً لدعمك!';
+        thankYouMessage.style.position = 'absolute';
+        thankYouMessage.style.top = '0';
+        thankYouMessage.style.left = '0';
+        thankYouMessage.style.width = '100%';
+        thankYouMessage.style.height = '100%';
+        thankYouMessage.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        thankYouMessage.style.color = '#FFD700';
+        thankYouMessage.style.display = 'flex';
+        thankYouMessage.style.justifyContent = 'center';
+        thankYouMessage.style.alignItems = 'center';
+        thankYouMessage.style.fontSize = '22px';
+        thankYouMessage.style.animation = 'thankYouAnimation 1s ease forwards';
+        
+        button.appendChild(thankYouMessage);
+
+        // تأخير التوجيه إلى الرابط لمدة 1 ثانية
+        setTimeout(() => {
+          window.location.href = button.href;
+        }, 1000);
+      }
+    </script>
   </body>
 </html>
